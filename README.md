@@ -10,7 +10,7 @@
 
 
 ## Repository Structure
-
+```text
 repo/
 │
 ├─ README.md
@@ -49,7 +49,6 @@ repo/
 
 
 ---
-
 
 ## Licensing
 
