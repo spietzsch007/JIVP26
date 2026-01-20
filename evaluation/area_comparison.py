@@ -19,7 +19,22 @@ def img_contour_to_polygon(img,kernel_size,iterations):
     relative_contour_points = np.array([(x / img_erosion.shape[1], y / img_erosion.shape[0]) for x, y in mean_contour_points])
     mean_contour_polygon = shapely.Polygon(relative_contour_points)
     return mean_contour_polygon
-
+    
+def img_contour_to_polygon_2(image):
+    """
+    Extracts the largest contour of a binary image and returns it as `shapely.polygon` 
+    with relative coordinates.
+    
+    :param image: Grayscale image as NumPy array
+    :return: `shapely.polygon` with coordinates normalized between 0 and 1
+    """
+    height, width = image.shape
+    contours, _ = cv2.findContours(image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    largest_contour = max(contours, key=cv2.contourArea)
+    relative_coords = [(point[0][0] / width, point[0][1] / height) for point in largest_contour]
+    relative_polygon = Polygon(relative_coords)
+    return relative_polygon
+    
 def IoU_poly(ref_poly, other_poly):    
     iou_polys=[]
     
