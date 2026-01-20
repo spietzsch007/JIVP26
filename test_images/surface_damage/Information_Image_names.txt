@@ -1,0 +1,7 @@
+The image names correspond to the following image numbers from the unpublished SD-Dataset:
+
+#4. SD-RC-Dataset  = 1_Resize_Sensofar2D.png
+#6. SD-RC-Dataset  = 2_Resize_Sensofar2D.png
+#7. SD-RC-Dataset  = 3_Resize_Sensofar2D.png
+#43. SD-RC-Dataset = 4_Resize_Sensofar2D.png
+#64. SD-RC-Dataset = 5_Resize_Sensofar2D.png
